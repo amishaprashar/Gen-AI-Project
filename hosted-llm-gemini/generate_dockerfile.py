@@ -1,15 +1,12 @@
 import google.generativeai as genai
 import os
 
-# Set your API key here
-os.environ["GOOGLE_API_KEY"] = ""
-
 # Configure the Gemini Model
 genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
 model = genai.GenerativeModel('gemini-1.5-pro')
 
 PROMPT = """
-Generate an ideal Dockerfile for {language} with best practices. Just share the dockerfile without any explanation between two lines to make copying dockerfile easy.
+Generate an ideal Dockerfile for {language} with best practices. Just share the Dockerfile without any explanation between the two lines to make copying the Dockerfile easy.
 Include:
 - Base Image
 - Installing dependencies
